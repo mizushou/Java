@@ -1,24 +1,24 @@
 
 public class ScopeTest {
-	//this is member variable.
-	int num;
+	//this is member variable[m1].
+	String var = "m1";
 	public static void main(String[] args) {
 		ScopeTest test = new ScopeTest();
-		//this is local variable.
-		int num = 0;
-		System.out.print(num);
+		//this is local variable[l1]　in main method.
+		String var = "l1";
+		System.out.println("①This var is :" + var);
 		test.foo();
-		System.out.print(num);
-		System.out.print(test.num);
+		System.out.println("②This var is :" + var);
+		System.out.println("③This var is :" + test.var);
 	}
 	void foo() {
-		//this is local variable.
-		int num = 1;
+		//this is local variable[l2] in foo method.
+		String var = "l2";
 		bar();
-		System.out.print(num);
+		System.out.println("④This var is :" + var);
 	}
 	void bar() {
-		//this is member variable.
-		num = 2;
+		//this refers 2nd line's member variable.
+		var = "m1+";
 	}
 }
