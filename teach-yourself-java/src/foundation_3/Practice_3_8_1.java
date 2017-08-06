@@ -1,4 +1,4 @@
-package fundation_3;
+package foundation_3;
 
 public class Practice_3_8_1 {
 	public static void main(String[] args) {
